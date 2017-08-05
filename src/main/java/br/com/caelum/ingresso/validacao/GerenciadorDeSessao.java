@@ -16,13 +16,18 @@ public class GerenciadorDeSessao {
 	}
 	
 	public boolean cabe(final Sessao sessaoAtual) {
-		/* Retorna  */
+		/* Retorna uma stream de sessões */
 		Stream<Sessao> stream = sessoesDaSala.stream();
 		
+		/* Varre a stream de sessões e cria uma stream de boolean com o retorno do método horarioIsValido para cada sessão */
 		Stream<Boolean> booleanStream = stream.map(
 							sessaoExistente -> horarioIsValido(sessaoExistente, sessaoAtual)
 						);
+		
+		/* Reduzir a stream de boolean em um só com lambda */
 		//Optional<Boolean> optionalCabe = booleanStream.reduce((b1, b2) -> Boolean.logicalAnd(b1, b2));
+		
+		/* Reduzir a stream de boolean em um só com method reference */
 		Optional<Boolean> optionalCabe = booleanStream.reduce(Boolean :: logicalAnd);
 		
 		return optionalCabe.orElse(true);
