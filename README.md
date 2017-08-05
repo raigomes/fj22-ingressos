@@ -4,3 +4,4 @@ Rai Gomes Mesquita
 
 Data: 29/7/2017
 Professor: Gabriel Leite (gabriel.leite@caelum.com)
+ - Buscar sobre lambda, method reference e Stream
