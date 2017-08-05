@@ -64,6 +64,15 @@ public class FilmeController {
         return modelAndView;
     }
 
+    @GetMapping("/filme/em-cartaz")
+    public ModelAndView emCartaz() {
+    	
+    	ModelAndView modelAndView = new ModelAndView("filme/em-cartaz");
+    	
+    	modelAndView.addObject("filmes", filmeDao.findAll());
+    	
+    	return modelAndView;
+    }
 
     @DeleteMapping("/admin/filme/{id}")
     @ResponseBody
