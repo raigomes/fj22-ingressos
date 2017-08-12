@@ -17,4 +17,10 @@ public class DescontoBanco implements Desconto {
 		return precoOriginal.multiply(percentualDeDesconto);
 	}
 
+	@Override
+	public String getDescricao() {
+		
+		return "Desconto Banco";
+	}
+
 }
