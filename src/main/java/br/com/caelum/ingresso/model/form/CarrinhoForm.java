@@ -23,6 +23,7 @@ public class CarrinhoForm {
 		this.ingressos = ingressos;
 	}
 	
+	//Transforma a lista de ids de ingressos vindos da tela em lista de objetos do tipo Ingresso
 	public List<Ingresso> toIngressos(SessaoDao sessaoDao, LugarDao lugarDao) {
 		
 		return this.ingressos.stream().map(ingresso -> {
