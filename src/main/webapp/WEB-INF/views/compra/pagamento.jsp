@@ -10,12 +10,12 @@
         <form action="/compra/comprar" method="post">
             <table class="table table-hover ">
                 <thead>
-                <th>Sala</th>
-                <th>Lugar</th>
-                <th>Filme</th>
-                <th>Horario</th>
-                <th>Tipo do Ingresso</th>
-                <th>Preço</th>
+	              <th>Sala</th>
+	              <th>Lugar</th>
+	              <th>Filme</th>
+	              <th>Horario</th>
+	              <th>Tipo do Ingresso</th>
+	              <th>Preço</th>
                 </thead>
 
                 <tbody>
@@ -74,6 +74,12 @@
                 </div>
             </div>
 
+			<div class="form-group">
+                <div class="col-md-6">
+                    <label for="vencimento">Vencimento:</label>
+                    <input id="vencimento" type="text" name="vencimento" class="form-control">
+                </div>
+            </div>
 
             <div class="form-group">
                 <div class="col-md-12">

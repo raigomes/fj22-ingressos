@@ -47,6 +47,13 @@
 	
 	<tx:annotation-driven/>
 
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<set merge="true">
+				<bean class="br.com.caelum.ingresso.converter.YearMonthConverter"></bean>
+			</set>
+		</property>
+	</bean>
 
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.gmail.com" />

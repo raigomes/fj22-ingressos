@@ -38,4 +38,8 @@ public class Carrinho {
 						.orElse(BigDecimal.ZERO);
 	}
 	
+	public Compra toCompra() {
+		return new Compra(ingressos);
+	}
+	
 }
